@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+:root {
+  --purple: #7C2D9E;
+  --pink:   #C9267A;
+  --dark:   #0F0717;
+  --light:  #FDF8FF;
+  --sand:   #F3E8FF;
+}
+
+@theme inline {
+  --font-serif: var(--font-serif), Georgia, serif;
+  --color-purple: #7C2D9E;
+  --color-pink:   #C9267A;
+  --color-dark:   #0F0717;
+  --color-light:  #FDF8FF;
+  --color-sand:   #F3E8FF;
+
+  /* Escala de marca — reemplaza el violet y purple genéricos de Tailwind
+     para que todo el sitio use el mismo morado (#7C2D9E = brand-600) */
+  --color-brand-50:  #F6EEFB;
+  --color-brand-100: #EEDCF7;
+  --color-brand-200: #DAB8EF;
+  --color-brand-300: #C186E3;
+  --color-brand-400: #A055CB;
+  --color-brand-500: #8A3AB2;
+  --color-brand-600: #7C2D9E;
+  --color-brand-700: #661F84;
+  --color-brand-800: #501868;
+  --color-brand-900: #3A1149;
+
+  /* Escala de acento — reemplaza el pink-* genérico de Tailwind
+     para que todo el sitio use el mismo rosa (#C9267A = accent-600) */
+  --color-accent-50:  #FDF0F6;
+  --color-accent-100: #FBDCEA;
+  --color-accent-200: #F5AFD1;
+  --color-accent-300: #EC7EB4;
+  --color-accent-400: #DD4A96;
+  --color-accent-500: #D03384;
+  --color-accent-600: #C9267A;
+  --color-accent-700: #A81D63;
+  --color-accent-800: #86174F;
+  --color-accent-900: #63113A;
+}
+
+/* @layer base para que las utilidades de Tailwind (mx-auto, px-*, etc.)
+   puedan sobreescribir este reset — CSS sin capa le gana a TODO layer
+   sin importar especificidad, y eso anulaba mx-auto en todo el sitio */
+@layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: #ffffff;
+  color: #111;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #7C2D9E, #C9267A);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glass {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: #f5f0fa; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg,#7C2D9E,#C9267A); border-radius: 3px; }
+
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position:  200% 0; }
+}
+.shimmer {
+  background: linear-gradient(90deg,#f3e8ff 25%,#e9d5ff 50%,#f3e8ff 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+.shimmer-dark {
+  background: linear-gradient(90deg,#1f2937 25%,#374151 50%,#1f2937 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+:focus-visible {
+  outline: 2px solid #7C2D9E;
+  outline-offset: 2px;
+}

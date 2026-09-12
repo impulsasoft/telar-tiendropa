@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" fill="none">
+  <rect width="44" height="44" rx="10" fill="url(#g)"/>
+  <!-- T letterform -->
+  <rect x="7" y="11" width="30" height="5" rx="2.5" fill="white"/>
+  <rect x="19.5" y="11" width="5" height="22" rx="2.5" fill="white"/>
+  <!-- Thread lines -->
+  <rect x="7" y="9" width="30" height="1.5" rx="0.75" fill="white" fill-opacity="0.2"/>
+  <rect x="7" y="33.5" width="30" height="1.5" rx="0.75" fill="white" fill-opacity="0.2"/>
+  <rect x="12" y="16" width="1.8" height="10" rx="0.9" fill="white" fill-opacity="0.25"/>
+  <rect x="30.2" y="16" width="1.8" height="10" rx="0.9" fill="white" fill-opacity="0.25"/>
+  <rect x="19.5" y="19" width="5" height="1.5" rx="0.75" fill="white" fill-opacity="0.5"/>
+  <rect x="19.5" y="23" width="5" height="1.5" rx="0.75" fill="white" fill-opacity="0.5"/>
+  <rect x="19.5" y="27" width="5" height="1.5" rx="0.75" fill="white" fill-opacity="0.5"/>
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="44" y2="44" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7C2D9E"/>
+      <stop offset="1" stop-color="#C9267A"/>
+    </linearGradient>
+  </defs>
+</svg>
